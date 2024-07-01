@@ -117,6 +117,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+
+
+#all css and image related code
+
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
@@ -129,6 +133,17 @@ MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
+
+
+
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+#login/logout redirects
 LOGIN_REDIRECT_URL = 'home'
 LOGOU_REDIRECT_URL = 'home'
