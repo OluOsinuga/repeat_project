@@ -1,7 +1,11 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Product ,Category
 from django.core.paginator import Paginator, EmptyPage,InvalidPage
+from django.views.generic import TemplateView
 # Create your views here.
+class HomePageView(TemplateView):
+    template_name = 'home.html'
+
 
 def prod_list(request, category_id=None):
     category = None 

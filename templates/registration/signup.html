@@ -1,19 +1,15 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
+{% extends 'base.html' %}
+{% block title %}
     <title>Signup page</title>
-</head>
-<body>
-    {% block content %}
-    <h1><a href="{% url 'home' %}">Olu shop</a></h1>
+{% endblock title %}
+
+{% block content %}
+
     <h4>Sign up</h4>
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Sign up"/>
     </form>
-    {% endblock content %}
-</body>
-</html>
+{% endblock content %}

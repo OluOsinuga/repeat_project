@@ -16,19 +16,7 @@ crossorigin="anonymous">
         <title>{% block title %} music shop {% endblock title %}</title>
     </head>
    
-    {% if user.is_authenticated %}
-        <p>hello {{user.username}}</p>
-        <a href="{% url 'logout' %}">Log out</a>
-    {% else %}
-        <p>your not logged in</p>
-        <div>
-            <li>
-                <a href="{% url 'login' %}">Log in</a>
-            	<a href="{% url 'signup' %}">\Sign up</a>
-            </li>
-        </div>
-        
-    {% endif %} 
+  
     <body>
         <div>
             {% include 'header.html' %}
