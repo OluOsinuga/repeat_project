@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'cart',
     'stripe',
     'order',
+    #3rd party 
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -142,7 +145,7 @@ MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
 
 
 
-
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
 
@@ -151,8 +154,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 #login/logout redirects
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'musicshop:all_products'
+LOGOUT_REDIRECT_URL = 'musicshop:all_products'
 
 STRIPE_SECRET_KEY = 'sk_test_51PmGqnJLlZ3xJ1cpCvtnrDWeNmuLylqLgGzz7vdOBgLfSYeacqsNee80JGAXoRZph2lhtYYSRJlC69d09I7NFqnM00pmAdRnsx'
 STRIPE_PUBLISHABLE_KEY= 'pk_test_51PmGqnJLlZ3xJ1cpDfAd3Qt7wTpM1Zs8N5Yp53b8gOcSdXoqWBNHVFR1GArC97rEuktE16eAV2yukiFT6s9g9H8b00OkVzQe4M'

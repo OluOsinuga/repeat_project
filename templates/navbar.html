@@ -27,17 +27,7 @@
                     class="fas fa-shopping-cart">({{item_count}})</i></a>
                 </li>
                 {% endif %}
-                {% if user.is_authenticated %}
-                    <a href="{% url 'logout' %}">Log out</a>
-                {% else %}
-                    <p>your not logged in</p>
-                    <div>
-                        <li>
-                            <a href="{% url 'login' %}">Log in</a>
-                            <a href="{% url 'signup' %}">\Sign up</a>
-                        </li>
-                    </div>
-                {% endif %}
+               
             </ul>
             <form class="d-flex" action="{% url 'search_app:searchResult' %}" method="get">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
